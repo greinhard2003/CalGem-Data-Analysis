@@ -49,7 +49,7 @@ class Application:
     def run_pipeline(self):
         try:
             GenerateFiles(self.production_file, self.wells_file)
-            self.status_label.config(text="Output saved as output.csv", fg="green")
+            self.status_label.config(text="Successfully created dataset.csv and summary.csv", fg="green")
         except Exception as e:
             messagebox.showerror("Error", f"Something went wrong:\n{str(e)}")
             self.status_label.config(text="Failed to generate output", fg="red")
